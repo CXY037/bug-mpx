@@ -1,0 +1,32 @@
+<template>
+  <list></list>
+  <van-dropdown-menu>
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+  </van-dropdown-menu>
+</template>
+
+<script>
+  import { createPage } from '@mpxjs/core'
+
+  createPage({
+    data: {
+      option2: [
+        { text: '默认排序', value: 'a' },
+        { text: '好评排序', value: 'b' },
+        { text: '销量排序', value: 'c' }
+      ],
+      value2: 'a'
+    },
+    onLoad () {}
+  })
+</script>
+
+<script type="application/json">
+  {
+    "usingComponents": {
+      "list": "../components/list",
+      "van-dropdown-menu": "@vant/weapp/dist/dropdown-menu/index",
+      "van-dropdown-item": "@vant/weapp/dist/dropdown-item/index"
+    }
+  }
+</script>
